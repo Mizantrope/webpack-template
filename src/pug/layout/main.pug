@@ -1,0 +1,15 @@
+block variables
+
+doctype html
+html(lang='en')
+    head
+        title Web pack template - #{title}
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="icon", type="image/svg", href="favicon.svg")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic")
+    body
+        #layout
+            include ../includes/header
+            main.main
+                block content
+            include ../includes/footer

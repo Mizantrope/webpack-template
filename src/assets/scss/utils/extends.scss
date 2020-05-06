@@ -1,0 +1,27 @@
+%logo {
+    height: $header-logo-height;
+
+    svg {
+        fill: $primary-color;
+        height: inherit;
+    }
+
+    .custom {
+        fill: lighten($primary-color, 20%);
+    }
+}
+
+%clear-ul-styles {
+    li {
+        margin: inherit;
+        padding: inherit;
+
+        &::before {
+            display: none;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: inherit;
+        }
+    }
+}

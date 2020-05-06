@@ -1,0 +1,85 @@
+.header {
+    background-color: $header-bg;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    height: $header-height;
+
+    &--fixed {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+    }
+
+    &__inner {
+        align-items: center;
+        display: flex;
+        height: inherit;
+        position: relative;
+    }
+
+    .logo {
+        @extend %logo;
+    }
+
+    .nav__link,
+    .link {
+        color: $header-link-color;
+        font-size: rem(18);
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .nav {
+        margin: 0 0 0 rem(40);
+        padding: 0 rem(20);
+
+        &__link {
+            font-family: $font-family-custom;
+            text-transform: uppercase;
+
+            &--active {
+                color: $secondary-color;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &-other {
+        align-self: center;
+        display: flex;
+        margin-left: auto;
+
+        &__city {
+            color: $font-color;
+            margin-right: rem(20);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .nav {
+            display: none;
+        }
+    }
+}
+
+.ui-kit .header {
+    height: rem(200);
+    position: relative;
+
+    .logo {
+        height: rem(80);
+    }
+
+    .header__inner {
+        justify-content: center;
+    }
+
+    h1 {
+        color: $white;
+        margin-bottom: 0;
+        margin-left: rem(40);
+    }
+}

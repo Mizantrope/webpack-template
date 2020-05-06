@@ -1,0 +1,8 @@
+@mixin bg-gradient($bg-1, $bg-2, $angle: 0) {
+    @if ($bg-1 != $bg-2) {
+        background-image: linear-gradient($angle, $bg-1, $bg-2);
+    }
+    @else {
+        background-color: $bg-1;
+    }
+}

@@ -1,0 +1,25 @@
+.logo {
+    @extend %logo;
+}
+
+#layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: rem(80) 0;
+}
+
+.section {
+    h2 {
+        margin-bottom: rem(20);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: rem(60);
+    }
+}

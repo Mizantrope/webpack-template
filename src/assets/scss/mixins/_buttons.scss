@@ -1,0 +1,23 @@
+@mixin button-variant($btn-bg-color, $btn-border-color) {
+    border-color: $btn-border-color;
+
+    &:hover {
+        background-color: darken($btn-bg-color, 5%);
+
+        &::before {
+            @include bg-gradient($btn-bg-color, lighten($btn-bg-color, 15%), 45deg);
+        }
+    }
+
+    &:active {
+        background-color: darken($btn-bg-color, 10%);
+
+        &::before {
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.15) inset;
+        }
+    }
+
+    &::before {
+        @include bg-gradient($btn-bg-color, lighten($btn-bg-color, 15%));
+    }
+}

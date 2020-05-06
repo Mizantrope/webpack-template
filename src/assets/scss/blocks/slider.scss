@@ -1,0 +1,17 @@
+.slider {
+    height: rem(600);
+    margin-top: rem(-80);
+
+    .slick-list,
+    .slick-track,
+    .slick-slide,
+    .slick-slide > div,
+    .slider__item {
+        height: 100%;
+    }
+
+    &__item {
+        background-size: cover;
+        background-position: 100% 50%;
+    }
+}

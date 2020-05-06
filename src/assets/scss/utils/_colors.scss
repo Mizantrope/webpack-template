@@ -1,0 +1,46 @@
+// Base colors
+
+$white: #fff;
+$gray:  #8c8c8c;
+$black: #000;
+
+
+// Theme colors
+
+$font-color: #333;
+$primary-color: #5a4a8a;
+$secondary-color: #b8c35a;
+$light-color: #f8f9fb;
+$danger-color: #ed1c24;
+$warning-color: #fa7c00;
+
+
+// Layout colors
+
+$bg-color: $light-color;
+
+
+// Header colors
+
+$header-bg: $white;
+
+
+// Footer Colors
+
+$footer-bg: darken($primary-color, 25%);
+$footer-link-color: $secondary-color;
+
+
+// Form
+
+$input-border-color: #cfcfcf;
+$input-placeholder-color: #9f9f9f;
+$input-border-color-over: #1f1f1f;
+
+$btn-disabled-color: #9f9f9f;
+$btn-disabled-bg: #dfdfdf;
+
+
+// Link color
+
+$link-color: $primary-color;

@@ -1,0 +1,57 @@
+// Global
+@import '_functions';
+@import '_variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+@import 'mixins/buttons';
+@import 'mixins/gradient';
+
+// Custom
+@import "utils/vars";
+@import "utils/libs";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+@import 'utils/extends';
+
+// Components
+@import 'components/_nav';
+@import '_type';
+
+// Includes
+@import 'includes/header';
+@import 'includes/main';
+@import 'includes/footer';
+
+html {
+    height: 100%;
+
+    body {
+        color: $font-color;
+        font-family: $font-family-base;
+        height: 100%;
+        line-height: 1.4;
+        margin: 0;
+        min-width: $min-width;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+
+        &.link {
+            color: $black;
+        }
+    }
+}

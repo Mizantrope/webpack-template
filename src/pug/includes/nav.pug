@@ -1,0 +1,10 @@
+-
+    nav = [
+        {'url': 'about', 'title': 'About'},
+        {'url': 'contacts', 'title': 'Contacts'}
+    ];
+
+ul.nav
+    each item in nav
+        li.nav__item
+            a.nav__link(class=`${currentPage == item.url ? 'nav__link--active' : ''}` href=`/${item.url}.html`) #{item.title}

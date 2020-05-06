@@ -1,0 +1,45 @@
+/******************
+ * Custom variables
+ ******************/
+
+// Colors
+@import '_colors';
+
+
+// ### General###
+
+$font-family-base:   'Roboto Condensed', sans-serif;
+$font-family-custom: 'Din Condensed', sans-serif;
+$min-width:          rem(320);
+
+// Header
+
+$header-height:         rem(90);
+$header-logo-height:    rem(40);
+$header-link-color:     #252525;
+
+// Footer
+
+$footer-offset-vertical: rem(40);
+
+
+// Typography
+
+$h1-font-size:      rem(64);
+$h2-font-size:      rem(48);
+$h3-font-size:      rem(24);
+$h4-font-size:      rem(20);
+$p-font-size:       rem(16);
+$subhead-font-size: rem(20);
+$p-lg-font-size:    rem(18);
+$p-sm-font-size:    rem(14);
+$list-font-size:    rem(16);
+$link-font-size:    rem(18);
+$ul-list-bg:        $font-color;
+
+
+// Alerts
+
+$alert-border-width:  1px;
+$alert-padding:       rem(15);
+$alert-margin-bottom: rem(20);

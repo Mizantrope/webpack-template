@@ -1,0 +1,184 @@
+// Headings
+
+h1,
+h2,
+h3,
+h4,
+.subhead {
+    font-family: $font-family-custom;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    line-height: rem(64);
+    margin-bottom: rem(20);
+}
+
+h2 {
+    font-size: $h2-font-size;
+    line-height: rem(48);
+    margin-bottom: rem(15);
+}
+
+h3 {
+    font-size: $h3-font-size;
+    line-height: rem(32);
+    margin-bottom: rem(10);
+}
+
+h4 {
+    font-size: $h4-font-size;
+    line-height: rem(24);
+    margin-bottom: rem(10);
+}
+
+.subhead {
+    font-size: $subhead-font-size;
+    line-height: rem(24);
+    margin: rem(10) 0;
+}
+
+p {
+    font-size: $p-font-size;
+    line-height: rem(24);
+
+    &:not(:last-child) {
+        margin-bottom: rem(10);
+    }
+
+    &.lg {
+        font-size: $p-lg-font-size;
+        line-height: rem(24);
+    }
+
+    &.sm {
+        font-size: $p-sm-font-size;
+        line-height: rem(22);
+    }
+}
+
+
+// Lists
+
+ul,
+ol {
+    li {
+        font-size: $list-font-size;
+        line-height: 1.5;
+        padding-left: rem(25);
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+
+        &::before {
+            content: ' ';
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: rem(10);
+    }
+}
+
+ul {
+    li {
+        &::before {
+            background-color: $ul-list-bg;
+            height: rem(4);
+            top: rem(10);
+            width: rem(4);
+        }
+    }
+}
+
+ol {
+    counter-reset: num;
+
+    li {
+        &::before {
+            content: counter(num) '.';
+            counter-increment: num;
+            font-family: inherit;
+        }
+    }
+}
+
+
+// Links
+
+a {
+    color: $link-color;
+
+    &:hover {
+        color: #333;
+    }
+}
+
+.link {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: $font-family-custom;
+    font-size: $link-font-size;
+
+    &__text {
+        & + .link__ico {
+            margin-left: rem(15);
+        }
+    }
+
+    &__ico {
+        & + .link__text {
+            margin-left: rem(15);
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    h1 {
+        font-size: rem(48);
+        margin-bottom: rem(15);
+    }
+
+    h2 {
+        font-size: rem(32);
+        margin-bottom: rem(10);
+    }
+
+    h3 {
+        font-size: rem(22);
+    }
+
+    h4 {
+        font-size: rem(20);
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    h1 {
+        font-size: rem(32);
+        margin-bottom: rem(10);
+    }
+
+    h2 {
+        font-size: rem(24);
+        margin-bottom: rem(10);
+    }
+
+    h3 {
+        font-size: rem(20);
+        margin-bottom: rem(5);
+    }
+
+    h4 {
+        font-size: rem(18);
+        margin-bottom: rem(5);
+    }
+}
